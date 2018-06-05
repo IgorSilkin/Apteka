@@ -19,8 +19,9 @@ class GoodsSeeder extends Seeder
                   'body' => "Подробно о парацетамоле",
                   'composition' => "Состав",
                   'price' => 10,
-                  'category_id' => 1,
-                  'is_new' => false
+                  'category' => 'antipyretic',
+                  'is_new' => false,
+                  'availability' => true
               ],
               [
                   'title' => "Анальгин",
@@ -28,8 +29,9 @@ class GoodsSeeder extends Seeder
                   'body' => "Подробно о анальгине",
                   'composition' => "Состав",
                   'price' => 15,
-                  'category_id' => 2,
-                  'is_new' => false
+                  'category' => 'painkillers',
+                  'is_new' => false,
+                  'availability' => true
               ],
               [
                   'title' => "Ambrobane",
@@ -37,8 +39,9 @@ class GoodsSeeder extends Seeder
                   'body' => "Подробно о Ambrobane",
                   'composition' => "Состав",
                   'price' => 190,
-                  'category_id' => 3,
-                  'is_new' => true
+                  'category' => 'antiviral',
+                  'is_new' => true,
+                  'availability' => true
               ],
               [
                   'title' => "Кеторол",
@@ -46,8 +49,9 @@ class GoodsSeeder extends Seeder
                   'body' => "Подробно о кетороле",
                   'composition' => "Состав",
                   'price' => 99,
-                  'category_id' => 2,
-                  'is_new' => true
+                  'category' => 'painkillers',
+                  'is_new' => true,
+                  'availability' => true
               ],
               [
                   'title' => "Перекись водорода",
@@ -55,8 +59,9 @@ class GoodsSeeder extends Seeder
                   'body' => "Подробно о перикиси",
                   'composition' => "Состав",
                   'price' => 22,
-                  'category_id' => 3,
-                  'is_new' => true
+                  'category' => 'antiviral',
+                  'is_new' => true,
+                  'availability' => false
               ],
               [
                   'title' => "Лазалван",
@@ -64,8 +69,19 @@ class GoodsSeeder extends Seeder
                   'body' => "Подробно о лазалване",
                   'composition' => "Состав",
                   'price' => 229,
-                  'category_id' => 3,
-                  'is_new' => true
+                  'category' => 'antiviral',
+                  'is_new' => true,
+                  'availability' => true
+              ],
+              [
+                  'title' => "Арбидол",
+                  'intro' => "Коротко о арбидоле",
+                  'body' => "Подробно о арбидоле",
+                  'composition' => "Состав",
+                  'price' => 100,
+                   'category' => 'antipyretic',
+                  'is_new' => true,
+                  'availability' => false
               ]
           )
         );

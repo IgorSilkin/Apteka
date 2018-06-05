@@ -14,15 +14,7 @@ class AppController extends Controller
         return view('index', compact('categories', 'products', 'is_new_products'));
     }
 
-    public function admin(){
-        $check = App\AdminBase::checkAdmin();
-        if($check == false){//если не админ или не зарегистрирован
-            return redirect('/');
-        }
-        else if($check == true){
-            //нужно грузить вью админки
-            return view('admin.index');
-        }
-
+    public function about(){
+        return view('about');
     }
 }

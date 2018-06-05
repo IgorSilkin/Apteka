@@ -12,7 +12,8 @@
         "backpack/logmanager": "^2.3",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "laravelcollective/html": "^5.4.0"
     },
     "require-dev": {
         "backpack/generators": "^1.1",

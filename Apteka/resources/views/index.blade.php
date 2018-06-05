@@ -12,7 +12,7 @@
                                 <div class="panel-heading">
                                     <ul class="panel-title">
                                         <li>
-                                            <a href="/category/{{$categoryItem['id']}}">{{$categoryItem['title']}}</a>
+                                            <a href="/category/{{$categoryItem['abb']}}">{{$categoryItem['title']}}</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -1,15 +1,14 @@
 @if ($products)
 <table class="table-bordered table-striped table">
     <tr>
-        <th class="text-center">Код товара</th>
         <th class="text-center">Название</th>
         <th class="text-center">Стомость, руб</th>
         <th class="text-center">Количество, шт</th>
+        <th class="text-center">Общая стомость, руб</th>
         <th class="text-center">Удалить</th>
     </tr>
     @foreach ($products as $product)
         <tr>
-            <td class="text-center">{{$product['product']['id']}}</td>
             <td class="text-center">
                 <a href="/product/{{$product['product']['id']}}">
                     {{$product['product']['title']}}
@@ -17,6 +16,7 @@
             </td>
             <td class="text-center">{{$product['product']['price']}}</td>
             <td class="text-center">{{$product['count']}}</td>
+            <td class="text-center">{{$product['count'] * $product['product']['price']}}</td>
             <td class="text-center">
                 <a class="btn btn-default delete-product-to-cart" data-id="{{$product['product']['id']}}" href="/cart">
                     <i class="fa fa-times"></i>
@@ -45,6 +45,9 @@
                 function (data) {
                     $("#cart-table").html(data);
                 });
+            $.post("/cart/items_in_cart/", {_token: '{{csrf_token()}}'}, function (data) {
+                $("#cart-count").html(data);
+            });
             return false;
         });
     });

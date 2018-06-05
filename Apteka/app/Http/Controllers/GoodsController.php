@@ -14,8 +14,12 @@ class GoodsController extends Controller
 
     public function show($id){
         $product = App\Goods::find($id);
+        $category_abb = App\Categories::where('abb', $product->category)->get();
+        if($category_abb != null){
+            $cat_title = $category_abb[0]->title;
+        }
         $categories = App\Categories::all();
-        return view('goods.show', compact('product', 'categories'));
+        return view('goods.show', compact('product', 'categories', 'cat_title'));
     }
 
     public function searchGoodsByCategoryID($category){

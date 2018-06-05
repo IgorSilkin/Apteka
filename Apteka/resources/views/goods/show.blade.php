@@ -12,7 +12,7 @@
                                 <div class="panel-heading">
                                     <ul class="panel-title">
                                         <li>
-                                            <a href="/category/{{$categoryItem['id']}}">
+                                            <a href="/category/{{$categoryItem['abb']}}">
                                                 {{$categoryItem['title']}}
                                             </a>
                                         </li>
@@ -44,6 +44,7 @@
                                             <div class="productinfo text-center">
                                                 <h3>{{$product['title']}}</h3>
                                                 <span class="price">{{$product['price']}} Pуб</span>
+                                                <h3>{{$cat_title}}</h3>
                                                 <h3>{{$product['intro']}}</h3>
                                                 <h3><a class="btn btn-default add-to-cart" data-id="{{$product['id']}}" href="#">В корзину</a></h3>
                                             </div>

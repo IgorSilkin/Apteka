@@ -15,12 +15,15 @@ class CategoriesSeeder extends Seeder
             array(
                 [
                     'title' => "Жаропонижающие",
+                    'abb' => "antipyretic",
                 ],
                 [
                     'title' => "Обезболивающие",
+                    'abb' => "painkillers",
                 ],
                 [
                     'title' => "Противовирусные",
+                    'abb' => "antiviral",
                 ]
             )
         );

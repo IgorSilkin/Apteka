@@ -63,7 +63,7 @@
                                     </div>
                                 @else
                                     @if(Auth::user()->is_admin == 1)
-                                        <li class="admin"><a href="/admin"><i class="fa fa-edit"></i>Админпанель</a></li>
+                                        <li class="admin"><a href="/admin-panel"><i class="fa fa-edit"></i>Админпанель</a></li>
                                     @endif
                                     <li class="dropdown"><a href="#"><i class="fa fa-user"></i>{{ Auth::user()->name }}<i class="fa fa-angle-down"></i></a>
                                         <ul role="menu" class="sub-menu">
@@ -124,12 +124,7 @@
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
                                 <li><a href="/">Главная</a></li>
-                                <li class="dropdown"><a href="#">Магазин<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="/catalog/">Каталог товаров</a></li>
-                                        <li><a href="/cart/">Корзина</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="/categories/">Категории товаров</a></li>
                                 <li><a href="/about/">О магазине</a></li>
                                 <li><a href="/contacts/">Контакты</a></li>
                             </ul>
